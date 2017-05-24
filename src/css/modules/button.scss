@@ -1,0 +1,8 @@
+.btn {
+  padding: .9rem 3rem;
+  text-decoration: none;
+
+  &.ghost {
+    border: 3px solid $black;
+  }
+}

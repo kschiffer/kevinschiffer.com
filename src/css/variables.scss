@@ -1,0 +1,29 @@
+// Breakpoints
+
+$bp-medium: 1600px;
+$bp-small: 1280px;
+$bp-tiny: 1100px;
+$bp-mobile: 650px;
+
+// Grid
+
+$toast-col-groups: (2, 3, 4, 5, 6, 8, 10, 12);
+$toast-breakpoint-medium: $bp-tiny;
+$toast-breakpoint-small: $bp-mobile;
+$page-width: 1600px;
+
+// Colors
+
+$black: #000000;
+$black-copy: #333;
+
+// Font Sizes
+
+$font-size-copy: 1.25rem; // 20px
+$font-size-mobile-nav: 1.25rem; // 20px
+$font-size-heading-1: 2.5rem; // 40px
+$font-size-claim: 3.375rem; //54px
+
+// Line Height
+
+$line-height: 2.0625rem; // 33px

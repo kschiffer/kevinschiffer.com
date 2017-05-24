@@ -1,0 +1,130 @@
+header {
+  max-width: $page-width;
+  margin: auto;
+  padding: 40px 2rem 40px 2rem;
+  div.grid {
+
+    nav {
+      @extend .grid__col;
+      @extend .grid__col--10-of-12;
+      @extend .grid__col--centered;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      a.logo {
+        display: block;
+        width: 70px;
+        height: auto;
+        @include media-query($bp-small) {
+          width: 60px;
+        }
+      }
+
+      .mobile-menu {
+        display: none;
+        float: right;
+        padding:1rem;
+        @include media-query($bp-mobile) {
+          display: block;
+        }
+      }
+
+      a.mobile-menu {
+        position:absolute;
+        right:0;
+        top:-.5rem;
+        z-index:10;
+      }
+
+      ul {
+        float: right;
+        margin: 0;
+        padding: .7rem 0 0;
+        width: 47%;
+        min-width: 410px;
+        display: flex;
+        justify-content: space-between;
+
+        @include media-query($bp-mobile) {
+          display: none;
+        }
+
+        li {
+          display: inline;
+          a {
+            text-decoration:none;
+            color: $black;
+            padding:1rem 2rem;
+            &:last-child {
+              padding-right:0;
+            }
+          }
+          a.home-icon {
+            position:relative;
+            top: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-query($bp-mobile) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: white;
+
+    &.stay {
+        position: fixed;
+    }
+    &.animations-enabled {
+      transition: transform 150ms linear;
+      will-change: transform;
+    }
+    &.scrolling-up {
+        transform: translateY(0%);
+    }
+
+    &.scrolling-down {
+        transform: translateY(-100%);
+    }
+  }
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0%);}
+}
+
+.mobile-menu-overlay {
+  width: 100%;
+  height: 100%;
+  height: calc(100% - 100px);
+  bottom: 0;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  display:none;
+  left:100%;
+
+  ul {
+    position: absolute;
+    list-style: none;
+    margin:0;
+    text-align: right;
+    bottom: 5rem;
+    right: 3rem;
+
+    li {
+      font-size: $font-size-mobile-nav;
+      padding: 1.5rem;
+      &:last-child {
+        padding-bottom:0rem;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -5,5 +5,14 @@
 @import 'vendor/grid';
 @import 'helper';
 
+// Modules
+@import 'modules/base';
+@import 'modules/header';
+@import 'modules/typography';
+@import 'modules/button';
+
+
 // Pages
 @import 'pages/index';
+@import 'pages/about';
+@import 'pages/work';

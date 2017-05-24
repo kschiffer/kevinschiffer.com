@@ -1,0 +1,39 @@
+main.work {
+  img {
+    width: 100%;
+  }
+
+  .work-item {
+    margin-bottom: 16px;
+  }
+
+  .projects {
+    margin-top: 5rem;
+  }
+}
+
+main.work-showcase {
+
+  img {
+    width: 100%;
+  }
+  .project-title {
+    margin-bottom: 10rem;
+      @include media-query($bp-mobile) {
+        margin-bottom: 5rem;
+      }
+    span {
+      @extend p;
+    }
+  }
+
+  .tasks {
+    margin-top: 2.2rem;
+    h3 {
+      margin-bottom:1.8rem;
+    }
+    span {
+      font-style: italic;
+    }
+  }
+}

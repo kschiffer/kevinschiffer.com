@@ -1,6 +1,5 @@
 {
   "src/markup": {
-    "watch": true,
-    "autoescape": true
+    "noCache": true
   }
 }
