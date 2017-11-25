@@ -1,0 +1,27 @@
+newmtl ihpone7:phong2SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Ka viskura_monitor_uv.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 98.00
+newmtl ihpone8:phong2SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Ka viskura_monitor_uv.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 98.00
+newmtl phong1SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Ka wifog_uv.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 98.00

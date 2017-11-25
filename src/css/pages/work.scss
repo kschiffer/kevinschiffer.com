@@ -5,32 +5,204 @@ main.work {
 
   .work-item {
     margin-bottom: 16px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    div.title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      text-align: center;
+      transform: translate(-50%, -60%);
+
+      h2 {
+        margin-bottom: 0;
+        white-space: nowrap;
+      }
+      h3 {
+        font-weight: normal;
+        margin-top: 1rem;
+      }
+      h2:after, h3:after {
+        content: " ";
+      }
+    }
+    div.cover {
+      opacity: 0;
+      background-color: rgba(255, 255, 255, .9);
+      position: absolute;
+      box-sizing: border-box;
+      top: 4px;
+      bottom: 8px;
+      left: 24px;
+      right: 4px;
+      z-index: 100;
+      //box-shadow: inset 0 0 0 4px black;
+      transform: rotateX(20deg) translateZ(150px);
+      transition: transform 300ms ease 100ms, opacity 300ms ease 100ms;
+      transform-origin: right center;
+    }
+
+    &:hover {
+      div.cover {
+        opacity: 1;
+        transform: rotateX(0deg) translateZ(0);
+        transition-delay: 400ms;
+      }
+    }
   }
 
   .projects {
     margin-top: 5rem;
+    transform-style: preserve-3d;
   }
 }
 
 main.work-showcase {
+  div.description {
+    &:after {
+      content: " ";
+      display: block;
+      margin-top: 60px;
+      height: 1px;
+      width: 60px;
+      background-color: #ccc;
+    }
+    b {
+      font-weight: 300;
+      color: black;
+    }
+  }
+
+  .grid__col--centered {
+    margin: auto;
+    display: block;
+  }
 
   img {
     width: 100%;
   }
   .project-title {
     margin-bottom: 10rem;
-      @include media-query($bp-mobile) {
-        margin-bottom: 5rem;
-      }
+    @include media-query($bp-mobile) {
+      margin-bottom: 5rem;
+    }
     span {
       @extend p;
+    }
+  }
+
+  a.back {
+    font-size: 16px;
+    margin-top: 100px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    padding-left: 0;
+    transition: opacity 100ms;
+    &:hover {
+      opacity: .6;
+    }
+    &:before {
+      content: "⟵ ";
+      padding-right: 5px;
+    }
+  }
+
+  .stage {
+    video, img {
+      display: block;
+      margin: 0 auto 50px auto;
+    }
+
+    video {
+      cursor: pointer;
+    }
+  }
+
+  .gallery {
+    p.info {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  .slider {
+    width: 100%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        list-style: none;
+        display: block;
+      }
+    }
+
+    &:not(.no-shadow) {
+      div.slick-list {
+        @include media-query(1160px) {
+          box-shadow: 0 0 80px 20px rgba(0, 0, 0, .04);
+        }
+      }
+    }
+
+    &.contained div.slick-list {
+      @include media-query(1160px) {
+        border-radius: 6px 6px 0 0;
+      }
+
+      @include media-query($bp-tiny) {
+        border-radius: 3px 3px 0 0;
+      }
+    }
+
+    &.contained, &.only-contained {
+      &.srt .slick-slide {
+        background-color: #33363c;
+        img {
+          box-shadow: 0 0 80px 20px rgba(0, 0, 0, .20);
+        }
+      }
+      &.viskura .slick-slide {
+        background-color: #C1E0CF;
+        img {
+          box-shadow: 0 0 80px 20px rgba(0, 0, 0, .06);
+        }
+      }
+      .slick-slide {
+        height: 75vh;
+        position: relative;
+        @include media-query(1160px) {
+          display: inline;
+          background-color: transparent;
+          height: auto;
+        }
+        img {
+          @include media-query(1160px) {
+            width: 100%;
+            height: auto;
+            position: static;
+            transform: none;
+            box-shadow: none !important;
+          }
+          position: absolute;
+          left: 50%;
+          top: 45px;
+          max-width: 1280px;
+          width: 90%;
+          transform: translateX(-50%);
+          border-radius: 6px 6px 0 0;
+        }
+      }
     }
   }
 
   .tasks {
     margin-top: 2.2rem;
     h3 {
-      margin-bottom:1.8rem;
+      margin-bottom: 1.8rem;
     }
     span {
       font-style: italic;

@@ -2,8 +2,8 @@
 @include font-face("Source Sans Pro", "/fonts/SourceSansPro-Bold", bold);
 @include font-face("Source Sans Pro", "/fonts/SourceSansPro-BoldIt", bold, italic);
 @include font-face("Source Sans Pro", "/fonts/SourceSansPro-It", normal, italic);
-@include font-face("Source Sans Pro", "/fonts/SourceSansPro-SemiBold", 300);
-@include font-face("Source Sans Pro", "/fonts/SourceSansPro-SemiBoldItalic", 300, italic);
+@include font-face("Source Sans Pro", "/fonts/SourceSansPro-Semibold", 300);
+@include font-face("Source Sans Pro", "/fonts/SourceSansPro-SemiboldIt", 300, italic);
 
 * {
   font-family: "Source Sans Pro", "HelveticaNeue", helvetica, sans-serif;
@@ -17,16 +17,18 @@ a {
 }
 
 main p a:not(.no-underline) {
-  text-shadow: 0px 1px white, 1px 1px white, -1px 1px white, 2px 1px white, -2px 1px white;
-  text-decoration:none;
-  box-shadow: inset 0px -2px 0 0px white,
-    inset 0 -3px $black;
+  text-shadow: 0px 1px white,
+    1px 1px white,
+    -1px 1px white,
+    2px 1px white,
+    -2px 1px white;
+  text-decoration: none;
+  box-shadow: inset 0px -2px 0 0px white, inset 0 -3px $black;
   transition: color 100ms ease-in-out, box-shadow 100ms ease-in-out;
 
   &:hover {
-    color:black;
-    box-shadow: inset 0px -1px 0 0px white,
-    inset 0 -2px black;
+    color: black;
+    box-shadow: inset 0px -1px 0 0px white, inset 0 -2px black;
   }
 }
 
@@ -36,23 +38,38 @@ p, h5 {
   color: $black-copy;
 }
 
-h2.claim {
-  font-size: $font-size-claim;
-  @extend .no-deco;
-  @include media-query($bp-mobile) {
-    font-size: $font-size-claim * 0.75;
+div.claim {
+  h3 {
+    @include media-query($bp-mobile) {
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+  }
+  h2 {
+    font-size: $font-size-claim;
+    margin-bottom: 3.1rem;
+    margin-top: 1rem;
+    //font-weight: 300;
+    @extend .no-deco;
+    @include media-query($bp-mobile) {
+      font-size: $font-size-claim * 0.45;
+      font-weight: bold;
+      margin-top: .6rem;
+      margin-bottom: 2.5rem;
+      line-height: 150%;
+    }
   }
 }
 
 .no-deco:after {
-    display:none;
+  display: none;
 }
 
 h2 {
   font-size: $font-size-heading-1;
   margin-bottom: 3rem;
   &:after {
-    padding-left:0.5rem;
+    padding-left: 0.5rem;
     content: " —";
   }
   &.with-sub {
@@ -62,12 +79,12 @@ h2 {
 
 h3 {
   &:after {
-    padding-left:0.5rem;
+    padding-left: 0.5rem;
     content: " —";
   }
 }
 
 h5 {
-  margin-top:0;
+  margin-top: 0;
   font-weight: normal;
 }

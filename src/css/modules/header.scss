@@ -1,9 +1,17 @@
 header {
-  max-width: $page-width;
-  margin: auto;
-  padding: 40px 2rem 40px 2rem;
-  div.grid {
+  height: 123px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 14;
 
+  & > div {
+    max-width: $page-width;
+    margin: auto;
+    padding: 40px 2rem 40px 2rem;
+  }
+
+  div.grid {
     nav {
       @extend .grid__col;
       @extend .grid__col--10-of-12;
@@ -16,6 +24,14 @@ header {
         display: block;
         width: 70px;
         height: auto;
+        transition: opacity 100ms, transform 100ms;
+        &:hover {
+          opacity: .9;
+          transform: scale(0.96);
+        }
+        &:active {
+          transform: scale(0.93);
+        }
         @include media-query($bp-small) {
           width: 60px;
         }
@@ -24,17 +40,17 @@ header {
       .mobile-menu {
         display: none;
         float: right;
-        padding:1rem;
+        padding: 1rem;
         @include media-query($bp-mobile) {
           display: block;
         }
       }
 
       a.mobile-menu {
-        position:absolute;
-        right:0;
-        top:-.5rem;
-        z-index:10;
+        position: absolute;
+        right: 0;
+        top: -.5rem;
+        z-index: 15;
       }
 
       ul {
@@ -42,7 +58,8 @@ header {
         margin: 0;
         padding: .7rem 0 0;
         width: 47%;
-        min-width: 410px;
+        min-width: 380px;
+        max-width: 450px;
         display: flex;
         justify-content: space-between;
 
@@ -52,49 +69,43 @@ header {
 
         li {
           display: inline;
+
           a {
-            text-decoration:none;
+            text-decoration: none;
             color: $black;
-            padding:1rem 2rem;
-            &:last-child {
-              padding-right:0;
+            padding: 1rem 2rem;
+            transition: opacity 100ms;
+            &:hover {
+              opacity: .6;
             }
           }
           a.home-icon {
-            position:relative;
+            position: relative;
             top: 1px;
           }
+        }
+        li:last-child a {
+          padding-right: 0;
         }
       }
     }
   }
 
-  @include media-query($bp-mobile) {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: white;
-
-    &.stay {
-        position: fixed;
-    }
-    &.animations-enabled {
-      transition: transform 150ms linear;
-      will-change: transform;
-    }
-    &.scrolling-up {
-        transform: translateY(0%);
-    }
-
-    &.scrolling-down {
-        transform: translateY(-100%);
-    }
+  &.stay {
+    position: fixed;
   }
-}
+  &.animations-enabled {
+    transition: transform 150ms linear;
+    will-change: transform;
+    background-color: white;
+  }
+  &.scrolling-up {
+    transform: translateY(0%);
+  }
 
-@keyframes slideDown {
-    from {transform: translateY(-100%);}
-    to {transform: translateY(0%);}
+  &.scrolling-down {
+    transform: translateY(-100%);
+  }
 }
 
 .mobile-menu-overlay {
@@ -105,13 +116,13 @@ header {
   background-color: white;
   position: fixed;
   z-index: 1;
-  display:none;
-  left:100%;
+  display: none;
+  left: 100%;
 
   ul {
     position: absolute;
     list-style: none;
-    margin:0;
+    margin: 0;
     text-align: right;
     bottom: 5rem;
     right: 3rem;
@@ -120,7 +131,7 @@ header {
       font-size: $font-size-mobile-nav;
       padding: 1.5rem;
       &:last-child {
-        padding-bottom:0rem;
+        padding-bottom: 0rem;
       }
       a {
         text-decoration: none;

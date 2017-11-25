@@ -1,8 +1,25 @@
 .btn {
-  padding: .9rem 3rem;
+  padding: .9rem 3rem 1rem;
   text-decoration: none;
+  transition: opacity 100ms, transform 100ms;
+  display: inline-block;
+
+  @include media-query($bp-mobile) {
+    padding: 8px 40px;
+  }
 
   &.ghost {
     border: 3px solid $black;
+    @include media-query($bp-mobile) {
+      border-width: 2px;
+    }
+  }
+
+  &:hover {
+    opacity: .9;
+    transform: scale(0.98);
+  }
+  &:active {
+    transform: scale(0.95);
   }
 }

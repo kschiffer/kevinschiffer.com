@@ -3,6 +3,8 @@
 @import 'mixins';
 @import 'vendor/normalize';
 @import 'vendor/grid';
+@import 'vendor/slick';
+@import 'vendor/swipebox.css';
 @import 'helper';
 
 // Modules
@@ -10,7 +12,7 @@
 @import 'modules/header';
 @import 'modules/typography';
 @import 'modules/button';
-
+@import 'modules/slider';
 
 // Pages
 @import 'pages/index';

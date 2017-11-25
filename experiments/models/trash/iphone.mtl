@@ -1,0 +1,9 @@
+newmtl ihpone7:phong2SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Ka test_uv.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 98.00
