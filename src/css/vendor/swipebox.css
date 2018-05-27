@@ -13,7 +13,7 @@ html.swipebox-html.swipebox-touch {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999 !important;
+  z-index: 9 !important;
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -97,7 +97,7 @@ html.swipebox-html.swipebox-touch {
   transition: 0.5s;
   position: absolute;
   left: 0;
-  z-index: 999;
+  z-index: 7;
   height: 50px;
   width: 100%;
 }
@@ -161,7 +161,7 @@ html.swipebox-html.swipebox-touch {
   top: 29px;
   right: 26px;
   position: absolute;
-  z-index: 9999;
+  z-index: 8;
   background-position: center center;
   background-image: url(/img/close_icon.svg);
   background-color: white;
@@ -192,7 +192,7 @@ html.swipebox-html.swipebox-touch {
   transition: all .3s ease;
   content: ' ';
   position: absolute;
-  z-index: 999;
+  z-index: 7;
   top: 0;
   height: 100%;
   width: 20px;

@@ -40,7 +40,7 @@ $('document').ready(() => {
 
   $slider.slick({
     slidesToShow: 1,
-    autoplay: true,
+    autoplay: false,
     speed: 750,
     autoplaySpeed: 8000,
     infinite: true,

@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="grid">
-    <div class="grid__col grid__col--12-of-12">
+    <div class="grid__col grid__col--12-of-12 gallery">
 
     <ul class="slider no-shadow">
       <li><img class="mobile-available" src="img/proj_title_wifog_01.jpg" alt="" /></li>

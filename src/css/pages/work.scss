@@ -42,12 +42,13 @@ main.work {
       transition: transform 300ms ease 100ms, opacity 300ms ease 100ms;
       transform-origin: right center;
     }
-
-    &:hover {
-      div.cover {
-        opacity: 1;
-        transform: rotateX(0deg) translateZ(0);
-        transition-delay: 400ms;
+    @include media-query-min($bp-mobile) {
+      &:hover {
+        div.cover {
+          opacity: 1;
+          transform: rotateX(0deg) translateZ(0);
+          transition-delay: 400ms;
+        }
       }
     }
   }
@@ -117,6 +118,7 @@ main.work-showcase {
 
     video {
       cursor: pointer;
+      width: 100%;
     }
   }
 
@@ -166,13 +168,16 @@ main.work-showcase {
         }
       }
       &.viskura .slick-slide {
-        background-color: #C1E0CF;
+        @include media-query-min($bp-mobile) {
+          background-color: #C1E0CF;
+        }
         img {
           box-shadow: 0 0 80px 20px rgba(0, 0, 0, .06);
         }
       }
       .slick-slide {
         height: 75vh;
+        max-height: 780px;
         position: relative;
         @include media-query(1160px) {
           display: inline;
@@ -193,7 +198,9 @@ main.work-showcase {
           max-width: 1280px;
           width: 90%;
           transform: translateX(-50%);
-          border-radius: 6px 6px 0 0;
+          @include media-query-min($bp-mobile) {
+            border-radius: 6px 6px 0 0;
+          }
         }
       }
     }

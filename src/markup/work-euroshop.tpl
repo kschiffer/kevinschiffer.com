@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="grid">
-    <div class="grid__col grid__col--12-of-12">
+    <div class="grid__col grid__col--12-of-12 gallery">
 
     <div class="stage">
       <video alt="" poster="img/proj_title_euroshop_01_poster.jpg" onclick="this.play();" controls><source src="img/proj_title_euroshop_01.mp4" type="video/mp4"></video>

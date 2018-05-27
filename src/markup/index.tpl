@@ -8,9 +8,9 @@
       <div class="v-center claim">
         <h3>Kevin Schiffer</h3>
         <h2>
-          Designer & Developer.<br>
-          Interaction Design Student.<br>
-          Carbon Based.<br>
+          Designer & Developer<br>
+          Interaction Design Student<br>
+          Currently in Amsterdam<br>
         </h2>
         <a href="/work" class="btn ghost">View Work</a>
       </div>

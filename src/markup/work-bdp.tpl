@@ -17,9 +17,9 @@
     </div>
   </div>
   <div class="grid">
-    <div class="grid__col grid__col--12-of-12">
+    <div class="grid__col grid__col--12-of-12 gallery">
 
-    <ul class="slider">
+    <ul class="slider no-shadow">
       <li><img src="img/proj_title_bdp_01.jpg" alt="" /></li>
       <li><img src="img/proj_title_bdp_02.jpg" alt="" /></li>
       <li><img src="img/proj_title_bdp_03.jpg" alt="" /></li>
@@ -29,7 +29,7 @@
       <div class="description">
         <p>
           <b>This project is a redesign study of the official website of bianco di puro, a high quality blender manufacturer.</b><br><br>
-          While their strenth undoubtedly lies in their design and products – their official website has trouble to live up to the
+          While their strength undoubtedly lies in their design and products – their official website has trouble to live up to the
           expectations and so, this redesign study was conceived.<br> The objective was to give the site a fresh feeling and to lay focus on the products and the delicious recipes
           that can be done using their blenders. The study involved a research of competitors, user research and wireframing.
 

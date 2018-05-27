@@ -1,17 +1,26 @@
 .btn {
-  padding: .9rem 3rem 1rem;
+  padding: 13px 40px 14px;
+  background-color: black;
+  color: white;
+  font-weight: lighter;
   text-decoration: none;
   transition: opacity 100ms, transform 100ms;
   display: inline-block;
 
+  @include media-query($bp-small) {
+    padding: 9px 35px 10px;
+  }
+
   @include media-query($bp-mobile) {
-    padding: 8px 40px;
+    padding: 7px 19px 8px;
+    font-size: 0.9rem;
+    font-weight: normal;
   }
 
   &.ghost {
     border: 3px solid $black;
     @include media-query($bp-mobile) {
-      border-width: 2px;
+      border-width: 1px;
     }
   }
 

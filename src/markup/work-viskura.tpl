@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="grid">
-    <div class="grid__col grid__col--12-of-12">
+    <div class="grid__col grid__col--12-of-12 gallery">
 
     <ul class="slider contained viskura">
       <li><img src="img/proj_title_viskura_01.jpg" srcset="img/proj_title_viskura_01@1x.jpg 1x, img/proj_title_viskura_01@2x.jpg 2x" alt="" /></li>

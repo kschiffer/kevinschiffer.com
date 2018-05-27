@@ -17,9 +17,9 @@
     </div>
   </div>
   <div class="grid">
-    <div class="grid__col grid__col--12-of-12">
+    <div class="grid__col grid__col--12-of-12 gallery">
 
-    <ul class="slider">
+    <ul class="slider no-shadow">
       <li><img src="img/proj_title_comcard_01.jpg" alt="" /></li>
       <li><img src="img/proj_title_comcard_02.jpg" alt="" /></li>
       <li><img src="img/proj_title_comcard_03.jpg" alt="" /></li>

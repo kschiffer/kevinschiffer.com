@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "file-loader": "^0.11.1",
+    "http-server": "^0.11.1",
     "image-webpack-loader": "^3.3.0",
     "livereload": "^0.6.2",
     "webpack-livereload-plugin": "^0.11.0"
