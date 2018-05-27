@@ -96,6 +96,39 @@ main {
   &.show {
     opacity: 1;
   }
+
+  &.text-page, &.work-showcase {
+    div.description, div.text {
+      b {
+        font-weight: 300;
+        color: black;
+      }
+      &:after {
+        content: " ";
+        display: block;
+        margin-top: 60px;
+        height: 1px;
+        width: 60px;
+        background-color: #ccc;
+      }
+    }
+    a.back {
+      font-size: 16px;
+      margin-top: 100px;
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 20px;
+      padding-left: 0;
+      transition: opacity 100ms;
+      &:hover {
+        opacity: .6;
+      }
+      &:before {
+        content: "⟵ ";
+        padding-right: 5px;
+      }
+    }
+  }
 }
 
 body {

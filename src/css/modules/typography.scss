@@ -32,11 +32,12 @@ main p a:not(.no-underline) {
   }
 }
 
-p, h5 {
+p, h5, ul li {
   font-size: $font-size-copy;
   line-height: $line-height;
   color: $black-copy;
 }
+
 
 div.claim {
   h3 {
@@ -93,4 +94,27 @@ h3 {
 h5 {
   margin-top: 0;
   font-weight: normal;
+}
+
+div.text {
+  h2 {
+    font-size: $font-size-heading-2;
+    margin-bottom: 1.2rem;
+    &:after {
+      content: "";
+    }
+    &:not(:first-child) {
+      margin-top: 4.0rem;
+    }
+  }
+  h3 {
+    font-size: $font-size-heading-3;
+    margin-bottom: 1rem;
+    &:after {
+      content: "";
+    }
+    &:not(:first-child) {
+      margin-top: 2.5rem;
+    }
+  }
 }

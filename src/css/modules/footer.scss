@@ -1,0 +1,42 @@
+footer {
+  & > div {
+    max-width: $page-width;
+    margin: auto;
+    padding: 0 2rem 25px 2rem;
+  }
+
+  div.grid {
+    nav {
+      @extend .grid__col;
+      @extend .grid__col--10-of-12;
+      @extend .grid__col--centered;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: .7rem 0 0;
+    width: 20%;
+    min-width: 130px;
+    max-width: 170px;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      display: inline;
+
+      a {
+        text-decoration: none;
+        opacity: .3;
+        transition: opacity 150ms;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
