@@ -2,7 +2,10 @@ footer {
   & > div {
     max-width: $page-width;
     margin: auto;
-    padding: 0 2rem 25px 2rem;
+    padding: 0 2rem 30px 2rem;
+    @include media-query($bp-mobile) {
+      padding: 0 2rem 20px 2rem;
+    }
   }
 
   div.grid {
@@ -19,9 +22,9 @@ footer {
   ul {
     margin: 0;
     padding: .7rem 0 0;
-    width: 20%;
-    min-width: 130px;
-    max-width: 170px;
+    width: 10%;
+    min-width: 100px;
+    max-width: 130px;
     display: flex;
     justify-content: space-between;
 
@@ -32,6 +35,10 @@ footer {
         text-decoration: none;
         opacity: .3;
         transition: opacity 150ms;
+        font-size: 1rem;
+        @include media-query($bp-mobile) {
+          margin-bottom: 0;
+        }
 
         &:hover {
           opacity: 1;
@@ -39,4 +46,11 @@ footer {
       }
     }
   }
+}
+
+main.full-height + footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

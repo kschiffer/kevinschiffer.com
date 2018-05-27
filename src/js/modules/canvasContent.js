@@ -108,7 +108,8 @@ canvasContent.init = function() {
   window.addEventListener('resize', function() {
     engine.resize();
   });
-  /*
+  
+/*
   var initialMouseX;
   var initialMouseY;
   document.addEventListener('mouseenter', function(event) {
@@ -118,15 +119,12 @@ canvasContent.init = function() {
     initialMouseY = event.pageY / canvasHeight;
   });
 
-
-
   document.addEventListener('mousemove', function(event) {
     var camera = scene.activeCamera;
     camera.rotation.x = deg2rad(((event.pageY - initialMouseY) / canvasHeight - 0.5) * 0.2);
     camera.rotation.y = deg2rad(((event.pageX - initialMouseX) / canvasWidth - 0.5) * 0.2);
   });
-
-  */
+*/
 };
 
 function deg2rad(deg) {
@@ -134,7 +132,7 @@ function deg2rad(deg) {
 }
 
 function loadModels(scene, callback) {
-  var speedDivisor = 50;
+  window.speedFactor = 1;
 
   async.parallel(
     [
@@ -197,11 +195,11 @@ function loadModels(scene, callback) {
             let iphonePosition = iphone.position.y;
 
             scene.registerBeforeRender(function() {
-              iphone.rotation.y = 0.5 + Math.sin(i / 120 + speedDivisor) * 0.3;
+              iphone.rotation.y = 0.5 + Math.sin(i / 120 * window.speedFactor) * 0.3;
               iphone.position.y =
-                iphonePosition + Math.sin(i / 200 + speedDivisor) * 0.3;
-              iphone2.rotation.y = 0.2 + Math.cos(i / 200 + speedDivisor) * 0.3;
-              iphone3.rotation.y = 0.1 + Math.sin(i / 140 + speedDivisor) * 0.4;
+                iphonePosition + Math.sin(i / 200 * window.speedFactor) * 0.3;
+              iphone2.rotation.y = 0.2 + Math.cos(i / 200 * window.speedFactor) * 0.3;
+              iphone3.rotation.y = 0.1 + Math.sin(i / 140 * window.speedFactor) * 0.4;
               i++;
             });
 
@@ -235,9 +233,9 @@ function loadModels(scene, callback) {
 
             scene.registerBeforeRender(function() {
               display.rotation.y =
-                deg2rad(-140) + Math.sin(i / 280 + speedDivisor) * 0.1;
+                deg2rad(-140) + Math.sin(i / 280 * window.speedFactor) * 0.1;
               display.position.y =
-                displayPosition + Math.cos(i / 200 + speedDivisor) * 0.3;
+                displayPosition + Math.cos(i / 200 * window.speedFactor) * 0.3;
               i++;
             });
 
@@ -271,7 +269,7 @@ function loadModels(scene, callback) {
 
             scene.registerBeforeRender(function() {
               wifog.rotation.y =
-                deg2rad(-10) + Math.sin(i / 160 + speedDivisor) * 0.2;
+                deg2rad(-10) + Math.sin(i / 160 * window.speedFactor) * 0.2;
               i++;
             });
 
