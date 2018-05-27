@@ -1,7 +1,7 @@
 {% include "partials/_header.tpl" %}
-
 <main class="wrap text-page">
-  <div class="grid__col grid__col--6-of-12 grid__col--push-3-of-12 ">
+  <div class="grid">
+    <div class="grid__col grid__col--6-of-12 grid__col--push-3-of-12 ">
     <div class="text">
       <h1>Privacy Policy</h1>
 
@@ -189,6 +189,7 @@
       </p>
     </div>
     <a href="/" class="back">Back to homepage</a>
+    </div>
   </div>
 </main>
 
